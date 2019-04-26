@@ -2,9 +2,9 @@ package piggybank;
 
 public class Dollar extends Bank
 {
-    public Dollar(double value, int quantity, double total, String type)
+    public Dollar(double value, int quantity, String type)
     {
-        super(value, quantity, total, type);
+        super(value, quantity, type);
     }
 
     @Override

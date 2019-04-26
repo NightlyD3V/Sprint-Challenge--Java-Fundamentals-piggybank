@@ -10,9 +10,13 @@ public class Main
         DecimalFormat fp = new DecimalFormat("$###,###.00");
 
         ArrayList<Bank> myBank = new ArrayList<>();
-        Dollar dollar = new Dollar(1.00, 1, 1, "Dollar");
-
-        myBank.add(dollar);
+        myBank.add(new Quarter(0.25, 1, "Quarter"));
+        myBank.add(new Dime(0.10, 1,"Dime"));
+        myBank.add(new Dollar(1,5,"dollar"));
+        myBank.add(new Nickel(0.05,3,"Dime"));
+        myBank.add(new Dime(0.10, 7,"Dime"));
+        myBank.add(new Dollar(1,1,"dollar"));
+        myBank.add(new Penny(0.01, 10, "Penny"));
 
         myBank.forEach((m) -> System.out.println(m));
         double sum = 0;
@@ -20,6 +24,6 @@ public class Main
         {
             sum += myBank.get(i).getTotal();
         }
-        System.out.println("your total is " + fp.format(sum));
+        System.out.println("your piggy bank holds " + fp.format(sum));
     }
 }

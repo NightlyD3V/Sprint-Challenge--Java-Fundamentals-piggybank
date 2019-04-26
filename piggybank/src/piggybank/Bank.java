@@ -4,13 +4,11 @@ public abstract class Bank
 {
     private double value;
     private int quantity;
-    private double total;
     private String type;
-    public Bank(double value, int quantity, double total, String type)
+    public Bank(double value, int quantity, String type)
     {
         this.value = value;
         this.quantity = quantity;
-        this.total = value * quantity;
         this.type = type;
     }
 
